@@ -2,14 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=https://apostate-portfolio.vercel.app/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting to my portfolio...</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #38bdf8;
+    }
+    p {
+      max-width: 500px;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+    .spinner {
+      border: 4px solid rgba(255,255,255,0.2);
+      border-top: 4px solid #38bdf8;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin-top: 1rem;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  <meta http-equiv="refresh" content="5; url=https://apostate-portfolio.vercel.app/" />
   <script>
-    // JavaScript fallback in case meta refresh doesn’t work
-    window.location.href = "https://apostate-portfolio.vercel.app/";
+    // fallback redirect (in case meta doesn't trigger)
+    setTimeout(() => {
+      window.location.href = "https://apostate-portfolio.vercel.app/";
+    }, 5000);
   </script>
-  <title>Redirecting...</title>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="https://apostate-portfolio.vercel.app/">click here</a>.</p>
+  <h1>Redirecting you to my real site 🚀</h1>
+  <p>
+    Coursera only allows GitHub links, so I had to host this small redirect page.
+    You’ll be sent to my actual portfolio on Vercel in a few seconds.
+  </p>
+  <p>
+    Once you’re there, feel free to explore — and if you spot the <strong>“7” looking icon</strong> 
+    in the top-right corner of the nav bar, click it 😉 (there’s a little Easter egg waiting).
+  </p>
+  <div class="spinner"></div>
+  <p><a href="https://apostate-portfolio.vercel.app/">Click here</a> if it doesn’t redirect automatically.</p>
 </body>
 </html>
